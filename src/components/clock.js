@@ -1,4 +1,4 @@
-import { increment, decrement, toggleTrue, toggleFalse } from "../actions";
+import { increment, decrement } from "../actions";
 
 class Clock {
   constructor(options) {
@@ -6,8 +6,6 @@ class Clock {
     this.store = store;
     this.$increment = el.querySelector("#increment");
     this.$decrement = el.querySelector("#decrement");
-    this.$odd = el.querySelector("#incrementIfOdd");
-    this.$async = el.querySelector("#incrementAsync");
     this.$value = el.querySelector("#value");
   }
 

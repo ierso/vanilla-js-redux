@@ -10,16 +10,10 @@ const decrement = () => {
   };
 };
 
-const toggleTrue = () => {
+const toggle = () => {
   return {
-    type: "TRUE"
+    type: "TOGGLE"
   };
 };
 
-const toggleFalse = () => {
-  return {
-    type: "FALSE"
-  };
-};
-
-export { increment, decrement, toggleTrue, toggleFalse };
+export { increment, decrement, toggle };

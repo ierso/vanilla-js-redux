@@ -11,11 +11,9 @@ const counter = (state = 0, action) => {
 
 const toggle = (state = false, action) => {
   switch (action.type) {
-    case "TRUE":
-      return { ...state, toggle: true };
+    case "TOGGLE":
+      return { ...state, toggle: !state.toggle };
       break;
-    case "FALSE":
-      return { ...state, toggle: false };
     default:
       return state;
   }

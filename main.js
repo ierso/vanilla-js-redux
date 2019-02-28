@@ -1,12 +1,18 @@
 import store from "./src/store";
-import { Clock } from "./src/components";
+import { Clock, Toggle } from "./src/components";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const newClock = new Clock({
+  const clock = new Clock({
     el: document.getElementById("clock"),
     store
   });
 
+  const toggle = new Toggle({
+    el: document.getElementById("button"),
+    store
+  });
+
   // init
-  newClock.init();
+  clock.init();
+  toggle.init();
 });
