@@ -10,9 +10,10 @@ const decrement = () => {
   };
 };
 
-const toggle = () => {
+const toggle = payload => {
   return {
-    type: "TOGGLE"
+    type: "TOGGLE",
+    payload: payload
   };
 };
 

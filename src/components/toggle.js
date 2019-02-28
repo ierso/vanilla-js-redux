@@ -8,7 +8,7 @@ class Toggle {
   }
 
   toggle() {
-    this.store.dispatch(toggle());
+    this.store.dispatch(toggle("here is the payload"));
   }
 
   addEvents() {
@@ -17,6 +17,7 @@ class Toggle {
 
   render() {
     const { toggle } = this.store.getState().toggle;
+    console.log(toggle);
     this.$toggle.innerText = toggle;
   }
 

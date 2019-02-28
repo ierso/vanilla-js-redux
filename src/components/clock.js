@@ -26,7 +26,6 @@ class Clock {
   addEvents() {
     this.$increment.addEventListener("click", this.increment.bind(this));
     this.$decrement.addEventListener("click", this.decrement.bind(this));
-    this.$odd.addEventListener("click", this.incrementOdd.bind(this));
   }
 
   render() {
