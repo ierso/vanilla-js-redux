@@ -1,10 +1,11 @@
-import { increment, decrement } from "../actions";
+import { increment, incrementOdd, decrement } from "../actions/clockActions";
 
 class Clock {
   constructor(options) {
     const { store, el } = options;
     this.store = store;
     this.$increment = el.querySelector("#increment");
+    this.$incrementOdd = el.querySelector("#increment-odd");
     this.$decrement = el.querySelector("#decrement");
     this.$value = el.querySelector("#value");
   }
@@ -14,9 +15,7 @@ class Clock {
   }
 
   incrementOdd() {
-    if (store.getState() % 2 !== 0) {
-      this.store.dispatch(increment());
-    }
+    this.store.dispatch(incrementOdd());
   }
 
   decrement() {
@@ -25,6 +24,7 @@ class Clock {
 
   addEvents() {
     this.$increment.addEventListener("click", this.increment.bind(this));
+    this.$incrementOdd.addEventListener("click", this.incrementOdd.bind(this));
     this.$decrement.addEventListener("click", this.decrement.bind(this));
   }
 

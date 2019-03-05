@@ -1,4 +1,4 @@
-import { toggle } from "../actions";
+import { toggle } from "../actions/toggleActions";
 
 class Toggle {
   constructor(options) {
@@ -17,7 +17,6 @@ class Toggle {
 
   render() {
     const { toggle } = this.store.getState().toggle;
-    console.log(toggle);
     this.$toggle.innerText = toggle;
   }
 
